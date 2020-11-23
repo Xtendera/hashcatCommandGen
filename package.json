@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "electron": "^11.0.2"
+  },
+  "name": "hashcatCommandGen",
+  "version": "0.0.2",
+  "description": "Create Hashcat commands quickly with this visual tool.",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "mr_noob",
+  "license": "CC"
+}

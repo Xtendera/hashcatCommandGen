@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hashcat Gen</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+      <code id="commandDisplay"></code>
+      <br>
+      <i>Bold = required</i>
+      <br>
+      <div><b>Hash Type:</b></div>
+      <select id="hashType" onchange="refresh();">
+        <option value="900">MD4</option>
+        <option value="0">MD5</option>
+        <option value="100">SHA1</option>
+        <option value="1300">SHA2-224</option>
+        <option value="1400">SHA2-256</option>
+        <option value="10800">SHA2-384</option>
+        <option value="1700">SHA2-512</option>
+        <option value="17300">SHA3-224</option>
+        <option value="17400">SHA3-256</option>
+        <option value="17500">SHA3-384</option>
+        <option value="17600">SHA3-512</option>
+        <option value="3200">Blowfish</option>
+      </select>
+      <br>
+      <div><b>Attack Mode:</b></div>
+      <select id="attackMode" onchange="refresh();">
+        <option value="0">Straight</option>
+        <option value="1">Combination</option>
+        <option value="3">Brute-force</option>
+        <option value="6">Hybrid Wordlist + Mask</option>
+        <option value="7">Hybrid Mask + Wordlist</option>
+      </select>
+      <div><b>Hash:</b></div>
+      <input type="text" id="hashInput" onchange="refresh();">
+      <br>
+      <div>Use CPU:</div>
+      <input type="checkbox" id="isCPU" onclick="refresh()">
+
+  </body>
+  <script defer src="hashcat.js"></script>
+</html>
